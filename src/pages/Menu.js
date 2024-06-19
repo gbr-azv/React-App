@@ -20,17 +20,53 @@ function Menu() {
 
         const fetchProducts = async () => {
 
-            let url = '';
-            if (isCategory(searchQuery)) {
-                url = `http://localhost:8000/menu/categories?search=${searchQuery}`;
-            } else if (searchQuery === 'on-offer') {
-                url = `http://localhost:8000/menu/on-offer`;
-            } else {
-                url = `http://localhost:8000/menu/product?search=${searchQuery}`;
-            }
+            let result = [];
 
-            const response =  await fetch(url);
-            const result = await response.json();
+            if (isCategory(searchQuery)) {
+                if (searchQuery === 'sushi') {
+                    result = [
+                        { name: 'Sushi Product 1', description: 'Description for Sushi Product 1', price: 10, image: 'sushi1.jpg' },
+                        { name: 'Sushi Product 2', description: 'Description for Sushi Product 2', price: 12, image: 'sushi2.jpg' },
+                        { name: 'Sushi Product 3', description: 'Description for Sushi Product 3', price: 15, image: 'sushi3.jpg' },
+                        { name: 'Sushi Product 4', description: 'Description for Sushi Product 4', price: 18, image: 'sushi4.jpg' },
+                        { name: 'Sushi Product 5', description: 'Description for Sushi Product 5', price: 20, image: 'sushi5.jpg' }
+                    ];
+                } else if (searchQuery === 'drinks') {
+                    result = [
+                        { name: 'Drink Product 1', description: 'Description for Drink Product 1', price: 5, image: 'drink1.jpg' },
+                        { name: 'Drink Product 2', description: 'Description for Drink Product 2', price: 7, image: 'drink2.jpg' },
+                        { name: 'Drink Product 3', description: 'Description for Drink Product 3', price: 8, image: 'drink3.jpg' },
+                        { name: 'Drink Product 4', description: 'Description for Drink Product 4', price: 6, image: 'drink4.jpg' },
+                        { name: 'Drink Product 5', description: 'Description for Drink Product 5', price: 9, image: 'drink5.jpg' }
+                    ];
+                } else if (searchQuery === 'massas') {
+                    result = [
+                        { name: 'Massa Product 1', description: 'Description for Massa Product 1', price: 20, image: 'massa1.jpg' },
+                        { name: 'Massa Product 2', description: 'Description for Massa Product 2', price: 22, image: 'massa2.jpg' },
+                        { name: 'Massa Product 3', description: 'Description for Massa Product 3', price: 25, image: 'massa3.jpg' },
+                        { name: 'Massa Product 4', description: 'Description for Massa Product 4', price: 28, image: 'massa4.jpg' },
+                        { name: 'Massa Product 5', description: 'Description for Massa Product 5', price: 30, image: 'massa5.jpg' }
+                    ];
+                } else if (searchQuery === 'hamburguer') {
+                    result = [
+                        { name: 'Hamburguer Product 1', description: 'Description for Hamburguer Product 1', price: 15, image: 'hamburguer1.jpg' },
+                        { name: 'Hamburguer Product 2', description: 'Description for Hamburguer Product 2', price: 17, image: 'hamburguer2.jpg' },
+                        { name: 'Hamburguer Product 3', description: 'Description for Hamburguer Product 3', price: 18, image: 'hamburguer3.jpg' },
+                        { name: 'Hamburguer Product 4', description: 'Description for Hamburguer Product 4', price: 19, image: 'hamburguer4.jpg' },
+                        { name: 'Hamburguer Product 5', description: 'Description for Hamburguer Product 5', price: 20, image: 'hamburguer5.jpg' }
+                    ];
+                }
+            } else if (searchQuery === 'on-offer') {
+                result = [
+                    { name: 'Offer Product 1', description: 'Description 1', price: 5, image: 'image3.jpg' },
+                    { name: 'Offer Product 2', description: 'Description 2', price: 15, image: 'image4.jpg' }
+                ];
+            } else {
+                result = [
+                    { name: 'Search Product 1', description: 'Description 1', price: 30, image: 'image5.jpg' },
+                    { name: 'Search Product 2', description: 'Description 2', price: 40, image: 'image6.jpg' }
+                ];
+            }
 
             setProducts(result);
         }
