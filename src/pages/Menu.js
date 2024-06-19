@@ -93,7 +93,7 @@ function Menu() {
                     result = [
                         { name: 'Classic Cheeseburger', description: 'Hambúrguer clássico com queijo cheddar derretido, alface crocante, tomate fresco e picles.', price: 12.00, image: '/10.jpg' },
                         { name: 'Bacon Onion Jam Burger', description: 'Hambúrguer suculento coberto com geleia de cebola e bacon, queijo cheddar branco e rúcula, em um pão tostado.', price: 14.00, image: '/11.jpg' },
-                        { name: 'Spicy and Smoky Candied Bacon Burger', description: 'Hambúrguer com bacon caramelizado picante, anéis de cebola crocantes e molho especial defumado.', price: 15.00, image: '/12.jpeg' },
+                        { name: 'Spicy and Smoky Bacon Burger', description: 'Hambúrguer com bacon caramelizado picante, anéis de cebola crocantes e molho especial defumado.', price: 15.00, image: '/12.jpeg' },
                         { name: 'Hawaiian Burger', description: 'Hambúrguer suculento com abacaxi grelhado, presunto e queijo suíço, servido em um pão de brioche com molho teriyaki.', price: 13.50, image: '/13.jpg' },
                         { name: 'Chorizo Burger', description: 'Hambúrguer de carne bovina misturado com chorizo picante, coberto com queso fresco, jalapeños e abacate.', price: 14.50, image: '/14.jpg' },
                         { name: 'Healthy Greek Burger', description: 'Hambúrguer de carne moída misturada com espinafre, feta e tomate seco, regado com molho tzatziki.', price: 13.00, image: '/15.jpg' },
@@ -164,7 +164,9 @@ function Menu() {
                     />
                     ))
                 ) : (
-                    <div>Carregando...</div>
+                    <div className='not-found'>
+                        <p>Nenhum produto encontrado... ;\</p>
+                    </div>
                 )}
             </div>
             <div className='menu-footer-container'>
