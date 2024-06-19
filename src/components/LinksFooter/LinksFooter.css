@@ -1,0 +1,33 @@
+.links-footer {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.links-footer a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all ease 0.3s;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.links-footer a:hover {
+    background-color: #E8EAED;
+    color: #fb6d48;
+}
+
+.logon a, .logon h1 {
+    color: #fff;
+}
+
+.home a, .home h1 {
+    color: #000;
+}
+
+.logon h1, .home h1 {
+    font-size: 24px;
+    padding: 0px 15px;
+}

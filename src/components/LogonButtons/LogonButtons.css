@@ -1,0 +1,56 @@
+.logon-button {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    width: 70%;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    border-radius: 50px;
+    transition: background-color ease 0.3s, color ease 0.3s;
+}
+
+.logon-button:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.fa-hover:hover {
+    background-color: #43609c;
+}
+
+.tt-hover:hover {
+    background-color: #55acee;
+}
+
+.email-hover:hover {
+    background-color: #43b02b;
+}
+
+.google-hover:hover {
+    background-color: #cd473b;
+}
+
+.icons {
+    font-size: 30px;
+}
+
+@media (max-width: 1440px){
+
+    .logon-button {
+        width:90%;
+    }
+}
+
+@media (max-width: 480px){
+
+    .logon-button {
+        width:90%;
+        justify-content: center;
+    }
+}

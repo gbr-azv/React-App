@@ -1,0 +1,30 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about-slider-container {
+    width: 100%;
+}
+
+.about-image-container {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    flex-direction: column;
+    font-size: 28px;
+    color: #fff;
+    height: 700px;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.about-headers-container {
+    margin: 100px 150px;
+}

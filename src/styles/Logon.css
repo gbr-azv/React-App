@@ -1,0 +1,55 @@
+.logon-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 60%;
+    box-sizing: border-box;
+    border-right: 0.5px solid #fff;
+}
+
+.logon-buttons, .oauth-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.oauth-buttons {
+    width: 100%;
+}
+
+.buttons-divisor {
+    color: #fff;
+    font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+
+    .sibling-div {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logon-inputs {
+        border-right: none;
+        width: 95%;
+        margin-left: 30px;
+    }
+
+    .oauth-buttons {
+        width: 100%;
+    }
+
+    .logon-buttons {
+        border-top: 0.5px solid #fff;;
+        padding-top: 40px;
+        width: 90%;
+        gap: 0px;
+    }
+}
